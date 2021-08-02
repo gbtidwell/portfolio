@@ -1,0 +1,116 @@
+/* body */
+
+body {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+/*
+body{
+	width: 800px;
+	margin: 0px auto;
+	border: 2px solid rgha(0,0,0,0,2);
+	padding: 0px 5px;
+}
+*/
+
+
+body.bg-image{
+	background-image: url('../images/webpage-background.jpg');
+	background-repeat: repeat-x;
+	width: 100%;
+	height: auto;
+	color: #2e2e2e;
+}
+
+#top{
+	background-image: url('../images/webpage-header.jpg');
+	width: 800px;
+	height: 170px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/*
+body{
+	width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
+*/
+
+p.big{
+	line-height: 1.75;
+}
+
+
+/*
+.info{
+	float: left;
+	width: 750px;
+}
+*/
+/* tring many ways to add the background to the websit */
+/*
+.bg-image{
+	background-image:url('../images/webpage-background.jpg');
+	background-repeat: repeat-x;
+	width: 800px;
+	height: auto;
+}
+*/
+nav{
+	display: inline-flex;
+	width: 100%;
+	height: 70px;
+	background-color: #222f3e;
+}
+
+li{
+	display: inline;
+	float: left;
+}
+
+nav li a{
+	display: block;
+	text-decoration: none;
+	line-height: 40px;
+	padding: 0px 20px;
+	color: #f0f0e4;
+}
+
+nav li:hover a{
+	background-color: lightgrey;
+}
+
+.main{
+	width: 100%;
+}
+
+.side-image{
+	background-image:url('../images/webpage-image-1.jpg');
+	float: right;
+	width: 180px;
+	height: 180px;
+	margin: 5px;
+	padding: 2px;
+	border: 2px solid black;
+}
+
+h2, h3, h4{
+	color: #1e3799;
+}
+
+footer{
+	background-color: #222f3e;
+	width: 100%;
+	line-height: 50px;
+	text-indent: 10px;
+	color: #fff;
+	height: 50px;
+}
+
+footer a{
+	text-decoration: none;
+	color: powderblue;
+}
