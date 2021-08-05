@@ -35,9 +35,8 @@ body.bg-image{
 	width: 800px;
 	height: 170px;
 	/*margin-right: auto;
-	margin-left: auto; */
+	margin-left: auto;*/
 }
-
 
 
 p.big{
@@ -51,6 +50,7 @@ p.big{
 	width: 750px;
 }
 */
+
 nav{
 	display: inline-flex;
 	width: 100%;
