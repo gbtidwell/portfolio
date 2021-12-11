@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang= "en">
-
 <head>
-  <meta charset="UTF-8">
-  <title>Page Title</title>
-  <meta name="description" content="Example of theaudiodb.com">
-  <meta name="keywords" content="HTML, CSS, JavaScript, AJAX">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<meta name="description" content="Example of theaudiodb.com">
+<meta name="keywords" content="HTML, CSS, JavaScript, AJAX">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <meta property="og:title" content>
@@ -21,6 +20,29 @@
   <meta name="theme-color" content="fafafa">
   
 <style>
+
+/*
+**************************************************************************************************
+body {
+	font-family: Arial, Helvetice, sans-serif;
+	margin: 0;
+}
+
+/* Style the header */
+.header {
+	padding: 80px;			/* some padding */
+	text-align: center;		/* center the text */
+	background: #1abc9c;  	/* green background */
+	color: white;			/* white text color */
+}
+
+/* Increase the font size of the h1 element */
+.header h1 {
+	font-size: 40px;
+}
+***************************************************************************************************
+*/
+
 html{
 	color: #222;
 	font-size: 1em;
@@ -37,10 +59,6 @@ html{
 	text-shadow: none;
 }
 
-/*
- * A better looking default horizontal rule
- */
- 
 hr {
 	display: block;
 	height: 1px;
@@ -82,7 +100,6 @@ body {
 	font-family: Arial, Helvetice, sans-serif;
 	margin: 0;
 }
-
 
 /* Style the header of the navbar */
 .header {
@@ -163,6 +180,7 @@ body {
 }
 
 //part of the header group
+
 .jumbotron{
 	padding: 30px; 					/*fills out the jumbotron*/
 	background-color: #1abc9c;		/*green color*/
@@ -192,6 +210,18 @@ body {
 	justify-content: center;
 }
 
+element.style{
+}
+.filtering{
+	margin-right: 12px;
+	padding: 4px 10px 4px 10px;
+	font-family: 'Raleway', Helvetice, Arial, sans-serif;
+}
+
+.filtering[letter="All"]{
+	font-weight: bold;
+}
+
 //content in the body of database
 .cards-wrapper{
 	display: grid;
@@ -212,32 +242,6 @@ body {
 .grid-container img{
 	width: 100%;
 }
-
-
-/* grid container and card wrappers 
-
-.card-wrapper{
-	display: grid;
-	padding: 10px;
-	column-gap: 5px;
-}
-
-<
-.grid-container{
-	width: 450;
-	margin: 1rm;
-	border-radius: 3px;
-	box-shadow: 0.2px 4px 5px black;
-	background-color: gray;
-	position: relative;
-	overflow: hidden;
-	display: inline-block;
-}
-
-.grid-container img{
-	width: 100%;
-}
->
 
 @media screen and (min-width: 790px){
 	.cards-wrapper-index{
@@ -312,6 +316,77 @@ body {
 	}
 }
 
+/*===================================
+	Hip Hop Music CSS
+ ====================================
+*/
+
+.cards-wrapper-index3{
+	display: grid;
+	padding: 10px;
+	column-gap: 5px;
+	justify-content: center;
+}
+
+.artist{
+	width: 300px;
+	margin: 1rem;
+	border-radius: 3px;
+	box-shadow: 0.2px 4px 5px black;
+	background-color: gray;
+	position: relative;
+	overflow: hidden;
+}
+
+.artist-img{
+	width: 100%
+}
+
+.artist-info{
+	display: flex;
+	background-color: rgba(255, 255, 255, 0.8);
+	aligh-items: center;
+	justify-content: space-between;
+	padding: 0.5rem 1rem 1rem;
+	letter-spacing: 0.5px;
+}
+
+.artist-info h3{
+	margin-top: 0;
+}
+
+.artist-info span{
+	background-color: #c6c9cf;
+	padding: 0.25rem 0.5rem;
+	border-radius: 3px;
+	font-weight: bold;
+}
+
+.artist-info span.green{
+	color: black;
+}
+
+.biography{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: white;
+	padding: 1rem;
+	max-height: 100%;
+	transform: translateY(101%);
+	transition: transform 0.3s ease-in;
+	overflow-y: scroll;
+}
+
+.biography h3 h4 h5{
+	margin-top: 0;
+}
+
+.artist:hover .biography{
+	transform: translateY(0);
+}
+
 h1{
 	text-align: center;
 }
@@ -331,6 +406,8 @@ body{
 	float: none:
 }
 
+
+
 /* footer cantainer */
 .footer{
 	padding: 10px; 			/* Some padding */
@@ -339,10 +416,11 @@ body{
 }
 
 
-  </style>
- </head>   
+</style>
+</head>
 <body>
- <div class="navbar">
+
+<div class="navbar">
 	<a class="active" href="index.html">Home</a>
     <a class="active" href="country.html">Country</a>
 	<a class="active" href="hip-hop-rap.html">Hip-Hop</a>
@@ -352,57 +430,58 @@ body{
 	<a class="active" href="pop.html">Pop</a>
 	<div class="search-container">
 		<form action="/action_page.php">
-			<input type="text" placeholder="Search .." name="search">
+			<input type="text" id="artist">
 			<button type="submit">Submit</button>
 		</form>
 	</div>	
- </div>
- <div class="jumbotron">
+</div>
+
+<div class="jumbotron">
 	<div class="container">
-	 <h1>Arkansas Music Makers</h1>
-	   <p>Welcome to the Arkansas Music Makers Database</p>
-	   <p>A database consist of information about the Arkasas Music Maker and the music they make.</p>
-    </div>
- </div>
- 
- <div class="card-wrapper">
-	<a href="country.html">
-		<div class="grid-container">
-			<h2>Country</h2>
-			<img src="assets/images/country_music_images.jpg" alt="country">
+		<h1>Arkansas Music Makers</h1>
+		<p>This list consist of Hip-Hop and Rap Music artist that were born or lived in the State of Arkansas.</p>
+	</div>
+</div>
+
+	<div class="cards-wrapper-index3">
+		<div class="artist">
+				<a href= "https://www.theaudiodb.com/artist/114274"><img id="neyothumb" alt="Ne-Yo" style="width: 400px; height: 450px;"></a>
+			<div class="artist_info">
+				<h3>Ne-Yo</h3>
+				<h4>Place of Birth</h4>
+				Camden, Arkansas
+				<h5>Birthday</h5>
+				October 18, 1982
+			</div>
 		</div>
-	</a>
-	<a href="hip-hop-rap.html">
-		<div class="grid-container">
-			<h2>Hip Hop and Rap</h2>
-			<img src="assets/images/hip-hop_music_images.jpg" alt="hip-hop">
-		</div>
-	</a>
-	<a href="jazz.html">
-		<div class="grid-container">
-			<h2>Jazz</h2>
-			<img src="assets/images/jazz_music_images.jpg" alt="jazz">
-		</div>
-	</a>
-	<a href="pop.html">
-		<div class="grid-container">
-			<h2>Pop</h2>
-			<img src="assets/images/pop_music_images.jpg" alt="pop">
-		</div>
-	</a>
-	<a href="r-b.html">
-		<div class="grid-container">
-			<h2>R & B</h2>
-			<img src="assets/images/r-b_music_images.jpeg" alt="r&b">
-		</div>
-	</a>
-	<a href="rock.html">
-		<div class="grid-container">
-			<h2>Rock</h2>
-			<img src="assets/images/rock_music_images.jpg" alt="rock">
-		</div>
-	</a>
- </div>
+	</div>
+	
+<script>
+
+search();
+
+async function search(){
+
+	//Ne-Yo
+	//Get the artist name from the textbox; encode the artist name in case there are special characters
+	artistSearchValue = encodeURI("Ne-Yo");
+	//Create the search URL; Note we are using 2 as the apikey
+	artistSearchURL = "https://theaudiodb.com/api/v1/json/2/search.php?s=" + artistSearchValue;
+	//AJAX call to fetch the data
+	artistObject = await fetch(artistSearchURL);
+	artistJSONText = await artistObject.text();
+	//Parse the JSON string into an object
+	artistData = JSON.parse(artistJSONText);
+	//Display the biography data - Note we display the first result - 0 index
+	//document.getElementById("biography").innerHTML = artists[0].strBiographyEN;
+	//Display the artist picture - Note we display the first result - 0 index; use "/preview" for smaller image
+	document.getElementById("neyothumb").src = artistData.artists[0].strArtistThumb + "/preview";
+	
+}
+
+</scrip>
+
+
 
 <div class="footer">
 	<h2>Footer</h2>

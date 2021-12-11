@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+<meta charset="UTF-8">
+<title>Page Title</title>
+<meta name="description" content="Example of theaudiodb.com">
+<meta name="keywords" content="HTML, CSS, JavaScript, AJAX">
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <meta property="og:title" content>
+  <meta property="og:type" content>
+  <meta property="og:url" content>
+  <meta property="og:image" content>
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!--Place favicon.ico in the root directory-->
+  <link rel ="stylesheet" href = "css/amm.css">
+  <meta name="theme-color" content="fafafa">
+  
+<style>
+
+/*
+**************************************************************************************************
+body {
+	font-family: Arial, Helvetice, sans-serif;
+	margin: 0;
+}
+
+/* Style the header */
+.header {
+	padding: 80px;			/* some padding */
+	text-align: center;		/* center the text */
+	background: #1abc9c;  	/* green background */
+	color: white;			/* white text color */
+}
+
+/* Increase the font size of the h1 element */
+.header h1 {
+	font-size: 40px;
+}
+***************************************************************************************************
+*/
+
+html{
+	color: #222;
+	font-size: 1em;
+	line-height: 1.4;
+}
+
+::-moz-selection{
+	background: #041933;
+	text-shadow: none;
+}
+
+::selection{
+	background: #041933;
+	text-shadow: none;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0:
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframe,
+ * images, videos and the bottom of their containers:
+ */
+ 
+audio,
+canvas,
+iframe,
+img,
+svg,
+video{
+	vertical-align: middle;
+}
+
+fieldset{
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textarea.
+ */
+ 
+textarea{
+	resize: vertical;
+}
+ 
+body {
+	font-family: Arial, Helvetice, sans-serif;
+	margin: 0;
+}
+
+/* Style the header of the navbar */
+.header {
+	padding: 40px;			/* some padding */
+	text-align: center;		/* center the text */
+	background: #1abc9c;  	/* green background */
+	color: white;			/* white text color */
+}
+
+/* Increase the font size of the h1 element */
+.header h1 {
+	font-size: 40px;
+}
+
+
+/* Style the navigation bar links */
+.navbar{
+	overflow: hidden;
+	background-color: #6230b3;      /* Moderate Violet */
+}
+
+/* Style the navigation bar links */
+.navbar a{
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 20px;
+	text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar .search-container{
+	float: right;
+}
+
+.navbar input[type=text] {
+	padding: 6px;
+	margin-top: 8px;
+	font-size: 17px;
+	border: none;
+}
+
+.navbar .search-container button{
+	float: right;
+	padding: 6px;
+	margin-top: 8px;
+	margin-right: 16px;
+	font-size: 17px;
+	border: none;
+	cursor: pointer;
+}
+
+.navbar .search-container button:hover {
+	background: #ccc;
+}
+/*
+@media screen and (max-width: 600px) {
+	.navbar .search-container{
+		float: none;
+	}
+}
+
+.navbar a, .navbar input[type=text], .navbar .search-container button{
+	float: none;
+	display: block;
+	text-aligh: left;
+	width: 100%;
+	margin: 0;
+	padding: 14px;
+}
+*/
+
+/* Change color on hover */
+.navbar a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+//part of the header group
+
+.jumbotron{
+	padding: 30px; 					/*fills out the jumbotron*/
+	background-color: #1abc9c;		/*green color*/
+}
+.container{
+	width: 1170px; 			        /* specify a width */
+	margin: 0 auto;			        /* centers the container */
+	padding: 0 15px			        /* add some padding to the left and right */
+}
+.jumbotron .container{
+	max-width: 100%;  				/* allows the jumbotron to adjust on smaller widths */
+	background-color: #1abc9c;		/* green color */
+}
+.jumbotron h1{
+	text-align:center; 				/* centers the heading */
+	color: white;
+	font-family: 'Raleway', Helvetice, Arial, sans-serif;
+	font-weight: 60;
+	text-transform: uppercase;
+}
+.jumbotron p{
+	text-align: center;
+	color: white;
+	font-size: 20px;
+}
+.filtering{
+	justify-content: center;
+}
+
+element.style{
+}
+.filtering{
+	margin-right: 12px;
+	padding: 4px 10px 4px 10px;
+	font-family: 'Raleway', Helvetice, Arial, sans-serif;
+}
+
+.filtering[letter="All"]{
+	font-weight: bold;
+}
+
+//content in the body of database
+.cards-wrapper7{
+	display: grid;
+	padding: 10px;
+	column-gap: 5px;
+	justify-content: center;
+}
+
+.grid-container{
+	width: 450px;
+	margin: 1rem;
+	border-radius: 3px;
+	box-shadow: 0.2px 4px 5px black;
+	background-color: gray;
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+}
+.grid-container img{
+	width: 100%;
+}
+
+@media screen and (min-width: 790px){
+	.cards-wrapper-index{
+	grid-template-columns: 1fr 1fr;
+	}
+	.cards-wrapper-index2{
+	grid-template-columns: 1fr 1fr;
+	}
+	.grid-template-index3{
+	grid-template-columns: 1fr 1fr;
+	}
+	.grid-template-index4{
+	grid-template-columns: 1fr 1fr;
+	}
+	.grid-template-index5{
+	grid-template-columns: 1fr 1fr;
+	}
+	.grid-template-index6{
+	grid-template-columns: 1fr 1fr;
+	}
+	.card-wrapper{
+	grid-template-columns; 1fr 1fr;
+	}
+}
+@media screen and (min-width: 1034px){
+	/* @tablet screen */
+	.cards-wrapper-index{
+	grid-template-columns: 1fr 1fr 1fr;
+	}
+	.cards-wrapper-index2{
+	grid-template-columns: 1fr 1fr 1fr;
+	}
+	.grid-template-index3{
+	grid-template-columns: 1fr 1fr 1fr;
+	}
+	.grid-template-index4{
+	grid-template-columns: 1fr 1fr 1fr;
+	}
+	.grid-template-index5{
+	grid-template-columns: 1fr 1fr 1fr;
+	}
+	.grid-template-index6{
+	grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+@media screen and (min-width: 1434px){
+	.card-wrapper{
+	grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1708px){
+	/* @desktop screen */
+	.cards-wrapper-index{
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+	.cards-wrapper-index2{
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+	.grid-template-index3{
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+	.grid-template-index4{
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+	.grid-template-index5{
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+	.grid-template-index6{
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+}
+
+/*===================================
+	Pop Music CSS
+ ====================================
+*/
+
+.cards-wrapper-index7{
+	display: grid;
+	padding: 10px;
+	column-gap: 5px;
+	justify-content: center;
+}
+
+.artist{
+	width: 300px;
+	margin: 1rem;
+	border-radius: 3px;
+	box-shadow: 0.2px 4px 5px black;
+	background-color: gray;
+	position: relative;
+	overflow: hidden;
+}
+
+.artist-img{
+	width: 100%
+}
+
+.artist-info{
+	display: flex;
+	background-color: rgba(255, 255, 255, 0.8);
+	aligh-items: center;
+	justify-content: space-between;
+	padding: 0.5rem 1rem 1rem;
+	letter-spacing: 0.5px;
+}
+
+.artist-info h3{
+	margin-top: 0;
+}
+
+.artist-info span{
+	background-color: #c6c9cf;
+	padding: 0.25rem 0.5rem;
+	border-radius: 3px;
+	font-weight: bold;
+}
+
+.artist-info span.green{
+	color: black;
+}
+
+.biography{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: white;
+	padding: 1rem;
+	max-height: 100%;
+	transform: translateY(101%);
+	transition: transform 0.3s ease-in;
+	overflow-y: scroll;
+}
+
+.biography h3 h4 h5{
+	margin-top: 0;
+}
+
+.artist:hover .biography{
+	transform: translateY(0);
+}
+
+h1{
+	text-align: center;
+}
+h2{
+	text-align: center;
+}
+body{
+	text-aligh:	center;
+	background-color: #d9caf1;	/*  Light grayish violet */
+}
+.content{
+	background-color: #706d76;	/* Dark grayish violet */
+}
+.content{
+	height: 75px;
+	width: 75px;
+	float: none:
+}
+
+
+
+/* footer cantainer */
+.footer{
+	padding: 10px; 			/* Some padding */
+	text-aligh: center;		/* Center text */
+	background: #6230b3;	/* Moderate Violet */
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="navbar">
+	<a class="active" href="index.html">Home</a>
+    <a class="active" href="country.html">Country</a>
+	<a class="active" href="hip-hop-rap.html">Hip-Hop</a>
+	<a class="active" href="jazz.html">Jazz</a>
+	<a class="active" href="r-b.html">R & B</a>
+	<a class="active" href="rock.html">Rock</a>
+	<a class="active" href="pop.html">Pop</a>
+	<div class="search-container">
+		<form action="/action_page.php">
+			<input type="text" placeholder="Search .." name="search">
+			<button type="submit">Submit</button>
+		</form>
+	</div>	
+</div>
+
+<div class="jumbotron">
+	<div class="container">
+		<h1>Arkansas Music Makers</h1>
+		<p>This list consist of Pop Music artist that were born or lived in the State of Arkansas.</p>
+	</div>
+	<button class="filtering" letter="A" onclick="filter('A')">A</button>
+	<button class="filtering" letter="B" onclick="filter('B')">B</button>
+	<button class="filtering" letter="C" onclick="filter('C')">C</button>
+	<button class="filtering" letter="D" onclick="filter('D')">D</button>
+	<button class="filtering" letter="E" onclick="filter('E')">E</button>
+	<button class="filtering" letter="F" onclick="filter('F')">F</button>
+	<button class="filtering" letter="G" onclick="filter('G')">G</button>
+	<button class="filtering" letter="H" onclick="filter('H')">H</button>
+	<button class="filtering" letter="I" onclick="filter('I')">I</button>
+	<button class="filtering" letter="J" onclick="filter('J')">J</button>
+	<button class="filtering" letter="K" onclick="filter('K')">K</button>
+	<button class="filtering" letter="L" onclick="filter('L')">L</button>
+	<button class="filtering" letter="M" onclick="filter('M')">M</button>
+	<button class="filtering" letter="N" onclick="filter('N')">N</button>
+	<button class="filtering" letter="O" onclick="filter('O')">O</button>
+	<button class="filtering" letter="P" onclick="filter('P')">P</button>
+	<button class="filtering" letter="Q" onclick="filter('Q')">Q</button>
+	<button class="filtering" letter="R" onclick="filter('R')">R</button>
+	<button class="filtering" letter="S" onclick="filter('S')">S</button>
+	<button class="filtering" letter="T" onclick="filter('T')">T</button>
+	<button class="filtering" letter="U" onclick="filter('U')">U</button>
+	<button class="filtering" letter="V" onclick="filter('V')">V</button>
+	<button class="filtering" letter="W" onclick="filter('W')">W</button>
+	<button class="filtering" letter="X" onclick="filter('X')">X</button>
+	<button class="filtering" letter="Z" onclick="filter('Z')">Z</button>
+	<button class="filtering" letter="All" onclick="filter('All')">All</button>
+</div>
+
+<div class="cards-wrapper-index7">
+	<div class="artist">
+	<img src="https://theaudiodb.com/api/v1/json/2/search.php?s" alt="image" style="width: 400px; height: 450px">
+		<div class="artist_info">
+			<
+		
+		</div>
+		<div class="biography">
+			<h3>Biography</h3>
+			<h4>Place of Birth</h4>
+			<h5>Birthday</h5>
+			<h5>...</h5>
+		</div>
+	</div>
+
+	<div class="artist">
+	<img src="" >
+		<div class="artist_info">
+		
+		
+		</div>
+		<div class="biography">
+			<h3>Biography</h3>
+			<h4>Place of Birth</h4>
+			<h5>Birthday</h5>
+			<h5>...</h5>
+		</div>
+	</div>
+
+	<div class="artist">
+	<img src="" >
+		<div class="artist_info">
+		
+		
+		</div>
+		<div class="biography">
+			<h3>Biography</h3>
+			<h4>Place of Birth</h4>
+			<h5>Birthday</h5>
+			<h5>...</h5>
+		</div>
+	</div>
+
+	<div class="artist">
+	<img src="" >
+		<div class="artist_info">
+		
+		
+		</div>
+		<div class="biography">
+			<h3>Biography</h3>
+			<h4>Place of Birth</h4>
+			<h5>Birthday</h5>
+			<h5>...</h5>
+		</div>
+	</div>
+
+	<div class="artist">
+	<img src="" >
+		<div class="artist_info">
+		
+		
+		</div>
+		<div class="biography">
+			<h3>Biography</h3>
+			<h4>Place of Birth</h4>
+			<h5>Birthday</h5>
+			<h5>...</h5>
+		</div>
+	</div>
+
+	<div class="artist">
+	<img src="" >
+		<div class="artist_info">
+		
+		
+		</div>
+		<div class="biography">
+			<h3>Biography</h3>
+			<h4>Place of Birth</h4>
+			<h5>Birthday</h5>
+			<h5>...</h5>
+		</div>
+	</div>
+
+	<div class="artist">
+	<img src="" >
+		<div class="artist_info">
+		
+		
+		</div>
+		<div class="biography">
+			<h3>Biography</h3>
+			<h4>Place of Birth</h4>
+			<h5>Birthday</h5>
+			<h5>...</h5>
+		</div>
+	</div>
+
+	<div class="artist">
+	<img src="" >
+		<div class="artist_info">
+		
+		
+		</div>
+		<div class="biography">
+			<h3>Biography</h3>
+			<h4>Place of Birth</h4>
+			<h5>Birthday</h5>
+			<h5>...</h5>
+		</div>
+	</div>
+
+	<div class="artist">
+	<img src="" >
+		<div class="artist_info">
+		
+		
+		</div>
+		<div class="biography">
+			<h3>Biography</h3>
+			<h4>Place of Birth</h4>
+			<h5>Birthday</h5>
+			<h5>...</h5>
+		</div>
+	</div>
+
+	<div class="artist">
+	<img src="" >
+		<div class="artist_info">
+		
+		
+		</div>
+		<div class="biography">
+			<h3>Biography</h3>
+			<h4>Place of Birth</h4>
+			<h5>Birthday</h5>
+			<h5>...</h5>
+		</div>
+	</div>
+</div>
+
+<div class="footer">
+	<h2>Footer</h2>
+</div>
+</body>
+</html>
